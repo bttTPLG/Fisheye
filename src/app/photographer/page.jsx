@@ -7,15 +7,22 @@ import PhotoCard from "@/components/PhotoCard/PhotoCard";
 import { FaHeart } from "react-icons/fa";
 import { useState } from "react";
 import FormModal from "@/components/FormModal/FormModal";
+import LightboxModal from "@/components/LightboxModal/LightboxModal";
 
 export default function Home({ price = "300€/jour" }) {
+  const [lightboxIsOpen, setLightboxIsOpen] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);
   };
   const closeModal = () => {
-    setIsOpen(false);
+    if (isOpen) {
+      setIsOpen(false);
+    }
+    if (lightboxIsOpen) {
+      setLightboxIsOpen(false);
+    }
   };
 
   const likephoto1 = 14;
@@ -35,7 +42,6 @@ export default function Home({ price = "300€/jour" }) {
             <PhotoCard likecounter={likephoto2} updatLike={setLikes} />
           </div>
         </section>
-
         <div className="cta">
           <div className="like">
             <p className="counter">{likes}</p>
@@ -43,8 +49,8 @@ export default function Home({ price = "300€/jour" }) {
           </div>
           <p className="price">{price}</p>
         </div>
-
-        {isOpen ? <FormModal close={closeModal} /> : null}
+        {isOpen ? <FormModal close={closeModal} /> : null};
+        {lightboxIsOpen ? <LightboxModal onClick={closeModal} /> : null}
       </main>
     </div>
   );

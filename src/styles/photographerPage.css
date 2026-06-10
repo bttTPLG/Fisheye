@@ -93,6 +93,7 @@ label {
   border-radius: 5px 5px 0 0;
   padding: 15px;
   gap: 60px;
+  z-index: 1;
 }
 
 .cta .like {

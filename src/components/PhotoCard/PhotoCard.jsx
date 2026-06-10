@@ -32,7 +32,7 @@ export default function PhotoCard({
         width={350}
         height={300}
         alt={`Photo ${title}`}
-        className="picture"
+        className="pictur"
       />
       <div className="title-and-like">
         <p>{title}</p>
