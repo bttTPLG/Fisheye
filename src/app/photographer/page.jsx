@@ -6,8 +6,18 @@ import PhotographerHeader from "@/components/PhotographerHeader/PhotographerHead
 import PhotoCard from "@/components/PhotoCard/PhotoCard";
 import { FaHeart } from "react-icons/fa";
 import { useState } from "react";
+import FormModal from "@/components/FormModal/FormModal";
 
 export default function Home({ price = "300€/jour" }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   const likephoto1 = 14;
   const likephoto2 = 17;
   const [likes, setLikes] = useState(likephoto1 + likephoto2);
@@ -15,7 +25,7 @@ export default function Home({ price = "300€/jour" }) {
     <div className="page">
       <Header />
       <main className="main">
-        <PhotographerHeader />
+        <PhotographerHeader contact={openModal} />
         <section className="photo-video-galerie">
           <div className="filter">
             <label htmlFor="filter">Trier par</label>
@@ -33,6 +43,8 @@ export default function Home({ price = "300€/jour" }) {
           </div>
           <p className="price">{price}</p>
         </div>
+
+        {isOpen ? <FormModal close={closeModal} /> : null}
       </main>
     </div>
   );

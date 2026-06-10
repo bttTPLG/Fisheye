@@ -6,6 +6,7 @@ export default function PhotographerHeader({
   name = "Paul",
   localisation = "Paris, France",
   citation = "Le beau dans l'instant figé !",
+  contact,
 }) {
   return (
     <section className="photographer-header">
@@ -14,7 +15,7 @@ export default function PhotographerHeader({
         <p className="localisation">{localisation}</p>
         <p className="citation">{citation}</p>
       </div>
-      <Button name="Cantacter moi !"></Button>
+      <Button name="Contacter moi !" onClick={contact}></Button>
       <Image
         src="/profil2.png"
         width={200}
