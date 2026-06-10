@@ -10,7 +10,7 @@ export default function Card({
 }) {
   return (
     <article className="profile-card">
-      <Link href="/" className="name-and-img-container">
+      <Link href="/photographer" className="name-and-img-container">
         <Image
           src="/profil2.png"
           width={200}
