@@ -5,16 +5,22 @@ import "@/styles/photoCard.css";
 import { FaHeart } from "react-icons/fa";
 import { useState } from "react";
 
-export default function PhotoCard({ title = "Titre", counter = 14 }) {
+export default function PhotoCard({
+  title = "Titre",
+  likecounter,
+  updatLike = setLikes,
+}) {
   const [liked, setLiked] = useState(false);
-  const [likes, setLikes] = useState(counter);
+  const [likes, setLikes] = useState(likecounter);
 
   const addLike = () => {
     if (!liked) {
-      setLikes(likes + 1);
+      setLikes((prev) => prev + 1);
+      updatLike((prev) => prev + 1);
       setLiked(true);
     } else {
-      setLikes(likes - 1);
+      setLikes((prev) => prev - 1);
+      updatLike((prev) => prev - 1);
       setLiked(false);
     }
   };
