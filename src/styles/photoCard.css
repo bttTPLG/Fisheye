@@ -1,0 +1,38 @@
+.picture {
+  object-fit: cover;
+  border-radius: 5px;
+  height: 100%;
+  aspect-ratio: 7 / 6;
+}
+
+.title-and-like {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title-and-like p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #901c1c;
+}
+
+.like {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+}
+
+.counter {
+  font-size: 24px;
+  font-weight: 500;
+  color: #901c1c;
+}
+
+.heart-icon {
+  color: #901c1c;
+  height: 24px;
+}
