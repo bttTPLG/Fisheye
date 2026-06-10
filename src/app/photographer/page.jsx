@@ -7,7 +7,7 @@ import PhotoCard from "@/components/PhotoCard/PhotoCard";
 import { FaHeart } from "react-icons/fa";
 import { useState } from "react";
 
-export default function Home() {
+export default function Home({ price = "300€/jour" }) {
   const likephoto1 = 14;
   const likephoto2 = 17;
   const [likes, setLikes] = useState(likephoto1 + likephoto2);
@@ -31,6 +31,7 @@ export default function Home() {
             <p className="counter">{likes}</p>
             <FaHeart className="heart-icon" />
           </div>
+          <p className="price">{price}</p>
         </div>
       </main>
     </div>

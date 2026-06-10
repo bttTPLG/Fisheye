@@ -92,6 +92,7 @@ label {
   background-color: #db8876;
   border-radius: 5px 5px 0 0;
   padding: 15px;
+  gap: 60px;
 }
 
 .cta .like {
@@ -109,5 +110,12 @@ label {
 
 .cta .like .heart-icon {
   color: #000000;
-  height: 24px;
+  font-size: 18px;
+  cursor: default;
+}
+
+.cta .price {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
 }
