@@ -5,8 +5,8 @@ import { IoMdClose } from "react-icons/io";
 
 export default function LightboxModal({ title = "Pigeon", onClick }) {
   return (
-    <section>
-      <div className="lightbox-modal">
+    <section className="lightbox-modal">
+      <div className="lightbox">
         <div className="btn-container">
           <button className="prev">
             <FaChevronLeft className="nav-icon" size={30} />
