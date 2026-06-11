@@ -1,28 +1,40 @@
 .lightbox-modal {
   width: 100%;
   height: 100%;
+  z-index: 2;
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 30px;
   padding: 40px 0;
-  z-index: 2;
-  position: fixed;
   top: 0;
   left: 0;
   background-color: #ffffff;
 }
 
+.lightbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+  height: 90%;
+  width: fit-content;
+}
+
 .photo-and-title {
+  height: 90%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 12px;
-  overflow: hidden;
 }
 .btn-container {
   position: relative;
-  height: 100%;
+  height: 90%;
   display: flex;
   align-items: center;
 }
@@ -30,11 +42,13 @@
   font-size: 24px;
   font-weight: 400;
   color: #901c1c;
+  width: auto;
+  height: 30px;
 }
 
 .picture {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 5px;
   aspect-ratio: 7 / 6;
   object-fit: cover;
